@@ -155,4 +155,4 @@ def chow_test(X_series: (pd.Series, pd.DataFrame), y_series: pd.Series, last_ind
     n_two = X_two.shape[0]
     chow_value = _calculate_chow_statistic(rss_pooled, first_rss, second_rss, k, n_one, n_two)
     chow_value, p_value = _determine_p_value_significance(chow_value, n_one, n_two, k, significance)
-    return chow_value, p_value, first_rss, second_rss
+    return chow_value, p_value
